@@ -1,11 +1,20 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+<link href="~/lib/font-awesome/css/biletall.css" rel="stylesheet" />
+
 
 <div class="text-center">
 
+    @{
+        string sonuc = ViewBag.Sonuc;
+        if (!string.IsNullOrEmpty(sonuc))
+        {
+            <h1 style="color:red">@sonuc</h1>
+        }
+    }
 
-    <div class="col-md-6" >
+    <div class="col-md-6">
 
         <ul class="nav nav-tabs">
             <li class="nav-item">
@@ -22,7 +31,7 @@
         <div class="tab-content">
             <div class="tab-pane container active" id="home">
                 <div class="bd-example">
-                   
+
                     <form method="post" enctype="multipart/form-data" asp-controller="Home" asp-action="Index">
                         <table>
                             <tr>
@@ -73,7 +82,7 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <input type="text" id="datepicker">
+                                    <input type="text" id="datepicker" name="tarih">
                                 </td>
                             </tr>
                             <tr>
@@ -89,15 +98,14 @@
                 </div>
 
 
-                <div class="row">
 
-
-
-
-                </div>
             </div>
             <div class="tab-pane container fade" id="menu1">...</div>
             <div class="tab-pane container fade" id="menu2">...</div>
         </div>
     </div>
 </div>
+
+
+
+
