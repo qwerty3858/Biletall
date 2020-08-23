@@ -181,7 +181,7 @@
                         <div class="col-2">
                             <div class="control-sec">
 
-                                @*<a href="javascript:void(0)" class="btn btn-danger">Koltuk Seç</a>*@
+                                <a href="javascript:void(0)" class="btn btn-danger">Koltuk Seç</a>
                                 <button type="button" class="btn btn-danger" onclick="KoltukBilgisiAl(@sefer.SeferTakipNo)">
                                     Koltuk Seç
                                 </button>
@@ -235,7 +235,7 @@
                                                 <span>4</span><img src="https://biletall-cdn.mncdn.com/img-v7/ortak/bay_dolu.svg">
                                             </a>
 
-                                            <a class="koltuk available" onclick="javascript:koltukSec(0,5,40);" seat="40" koltukindex="54" koltukfiyat="30">
+                                            <a class="koltuk available" @*onclick="javascript:koltukSec(0,5,40);"*@ seat="40" koltukindex="54" koltukfiyat="30">
                                                 <span>40</span>
                                                 <img src="https://biletall-cdn.mncdn.com/img-v7/ortak/ikonlar/bos_koltuk.svg">
                                             </a>
@@ -269,12 +269,7 @@
                                 </div>
                             </div>
                             <div class="middle-slot">
-
-                                @using (Html.BeginForm("Rezervasyon", "Home", FormMethod.Get))
-                                {
-                                    <a href="javascript:void(0)" class="btn total-btn grey deactive_link"><span>Toplam <strong>0<i> TL</i></strong></span> </a>
-                                    <button type="submit" class="btn btn-danger">Devam Et</button>
-                                }
+                                <a href="javascript:void(0)" class="btn total-btn grey deactive_link"><span>Toplam <strong>0<i> TL</i></strong></span> <span>Devam Et</span></a>
                             </div>
                         </div>
                     </div>
